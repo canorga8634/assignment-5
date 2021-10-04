@@ -1,0 +1,65 @@
+@mixin backImage($image, $margin:0){
+  background: $image;
+  background-repeat: repeat-x;
+  background-color: $background-white;
+  margin:$margin;
+}
+
+
+@mixin logoImage($image, $width:540px, $height:190px, $margin: 0){
+  background: $logo;
+  float: left;
+  background-repeat: no-repeat;
+  display: block;
+  width:$width;
+  height:$height;
+  margin:$margin;
+}
+
+@mixin footerBackground($background, $height:90px, $width:($size * 1)/$size,){
+  background:$background;
+  width:$width;
+  height: $height;
+}
+
+@mixin break($length){
+  @media (max-width:$length){
+      @content;
+  }
+}
+
+
+
+// @mixin wt_and_ht($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+// @mixin socialMediaImg($offest:  0px) {
+//   background:url($socialMediaImg) -38px * $offest 0;
+// }
+
+// @mixin navbar($width, $height, $float) {
+//   @include wt_and_ht($width, $height);
+//   float: $float;
+// }
+
+// @mixin headers($color, $fnt-wt, $fnt-size, $li-ht: 0) {
+//   color: $color;
+//   font-weight:$fnt-wt;
+//   font-size:$fnt-size;
+//   line-height:$li-ht;
+// }
+
+// @mixin contentStyles($width, $float) {
+//   width: $width;
+//   float: $float;
+// }
+
+// @mixin insertMediaQuery($args) {
+//   @if length($args) == 1 {
+//     @media (max-width: nth($args, 1)) {
+//       @content;
+//     }
+//   }
+// }
